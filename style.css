@@ -26,6 +26,7 @@ color:hotpink;
 text-decoration:none;
 font-weight: bold;
 transition:color 0.3s ease;
+position:relative;
 }
 section{
 margin:20px;
@@ -58,18 +59,53 @@ gap:15px;
 max-width:400px;
 margin:0 auto;
 }
+input.textextra,button{
+width:100%;
+padding:100px;
+font-size:1rem;
+border-radius:5px;
+}
+.button{
+background-color:#333;
+color:white;
+cursor:pointer;
+transition:background-color0.3s;
+button:hover{
+backgground-color:#FF9800;
+}
 nav ul li a:hover{
 color:green;
 }
 section h2{
 color:#333;
 margin-bottom:10px;
-}footer{
+}
+footer{
 background-color:#333;
 color:#fff;
 text-align:center;
 padding:10px 0;
+  
 position:absolute;
 bottom:0;
 width:100%;
 }
+nav ul li a:before{
+content:' ';
+position:absolute;
+left:0;
+height:2px;
+width:0;
+background:#ff9800;
+transition:width0.3s case-in-out;
+}
+nav ul li a:hover::before{
+width:100%;
+}
+@media(max-width:768px{
+nav ul{
+flex-direction:column;
+}
+project{
+text-align:center;
+  
