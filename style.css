@@ -1,112 +1,169 @@
-body{
-font-family:Arial,San serif;
-margin:0px;
-padding:0px;
-line-height: 1.6;
+/* General Styles */
+
+header {
+  background-color: #333;
+  padding: 20px 0; /* Increase top and bottom padding */
 }
-header{
-background-color: deeppink;
-color:#fff;
-padding:1rem 0;
-text-align:center;
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
-nav ul{
-list-style:none;
-display:flex;
-justify-content:center;
-margin:0;
-padding:0;
+
+nav ul li {
+  margin: 0 25px; /* Increase margin between items */
 }
-nav ul li{
-display:inline;
-margin:0 15px;
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 1.5rem; /* Increase font size for navigation links */
+  padding: 10px 15px; /* Add padding to links for better click area */
 }
-nav ul li a{
-color:hotpink;
-text-decoration:none;
-font-weight: bold;
-transition:color 0.3s ease;
-position:relative;
+
+nav ul li a:hover {
+  color: #ff9800;
 }
-section{
-margin:20px;
-padding:50px 20px;
-max-width:800px;
-text-align:center;
+
+/* Section Styles */
+section {
+  padding: 50px 20px;
+  text-align: center;
 }
-#project,#about,#contact-me{
-max-width:800px;
-margin:20px auto;
+
+#about,
+#projects,
+#contact {
+  margin: 20px auto;
+  max-width: 800px;
 }
-.project{
-background-color:blue;
-margin:20px;
-padding:20px;
-border-radius:10px;
-box-shadow:0 4px 6px rgba(0,0,0,0,1);
-transition:transform 0.3s case-in-out;
-display:flex;
-text-direction:column;
-align-items:center;
+
+/* Flexbox for Projects */
+.project {
+  background-color: #f4f4f4;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.project:hover{
-ttransform:translate(-5px)
+
+.project:hover {
+  transform: translateY(-5px);
 }
-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:400px;
-margin:0 auto;
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  color: #ccc;
 }
-input.textextra,button{
-width:100%;
-padding:100px;
-font-size:1rem;
-border-radius:5px;
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
-.button{
-background-color:#333;
-color:white;
-cursor:pointer;
-transition:background-color0.3s;
-button:hover{
-backgground-color:#FF9800;
+
+button {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-nav ul li a:hover{
-color:green;
+
+button:hover {
+  background-color: #ff9800;
 }
-section h2{
-color:#333;
-margin-bottom:10px;
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
-footer{
-background-color:#333;
-color:#fff;
-text-align:center;
-padding:10px 0;
-  
-position:absolute;
-bottom:0;
-width:100%;
+
+/* CSS Transitions and Animations */
+nav ul li a {
+  position: relative;
 }
-nav ul li a:before{
-content:' ';
-position:absolute;
-left:0;
-height:2px;
-width:0;
-background:#ff9800;
-transition:width0.3s case-in-out;
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #ff9800;
+  transition: width 0.3s ease-in-out;
 }
-nav ul li a:hover::before{
-width:100%;
+
+nav ul li a:hover::before {
+  width: 100%;
 }
-@media(max-width:768px{
-nav ul{
-flex-direction:column;
+.about-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
 }
-project{
-text-align:center;
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .project {
+    text-align: center;
+  }
 }
+
+/* Dark Mode */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  background-color: #282c34; /* Dark gray background */
+  color: rgb(29, 27, 27); /* Change text color to white for better contrast */
+  font-size: 18px; /* Increase base font size */
+}
+
+h2 {
+  font-size: 2.5rem; /* Increase size for h2 headings */
+}
+
+h3 {
+  font-size: 2rem; /* Increase size for h3 headings */
+}
+
+p {
+  font-size: 1.2rem; /* Increase size for paragraph text */
+}
+
+ul li {
+  font-size: 1.2rem; /* Increase size for list items */
+}
+
+button {
+  font-size: 1.2rem; /* Increase size for button text */
 }
